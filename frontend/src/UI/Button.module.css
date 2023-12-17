@@ -1,0 +1,90 @@
+.btn_main{
+    margin-top: 20px;
+    padding: 12px 56px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+    border: none;
+
+}
+
+.green{
+    border: none;
+    background: var(--green, #393);
+    color: var(--txt-white, #FFF);
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+.gray{
+    border: none;
+    background: var(--black, #282828);
+    color: white;
+}
+
+.submit_button {
+    padding: 16px 32px;
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  
+
+.navigation{
+    background-color: white;
+    color: gray;
+    border: 1px solid gray;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.x_green {
+    width: 218px;
+    height: 58px;
+    padding: 16px 56px; 
+    border-radius: 6px;
+    gap: 10px;
+    font-size: 16px;
+}
+
+
+.cart {
+    width: 316px;
+    height: 58px;
+    padding: 16px 32px 16px 32px;
+    border-radius: 6px;
+    gap: 10px;
+    background-color: #4CAF50; 
+    color: #fff; 
+    font-size: 16px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+  }
+  
+
+  .hover_but {
+    color: white;
+    background-color: #339933;
+    margin: auto;
+    width: 100%;
+  }
+  
+  .hover_but:hover {
+    background-color: #282828;
+  }
+  

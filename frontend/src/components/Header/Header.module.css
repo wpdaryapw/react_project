@@ -1,0 +1,34 @@
+.main{
+    height: 128px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dddddd;
+    justify-content: center;
+    background-color: white;
+}
+
+
+.nav_wrapper{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    padding: 0 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo{
+    width: 70px;
+}
+
+
+.nav{
+    display: flex;
+    gap: 32px;
+}
+
+
+.icon{
+    width: 48px;
+}

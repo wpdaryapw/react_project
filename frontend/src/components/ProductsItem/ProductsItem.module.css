@@ -1,0 +1,34 @@
+.discount_tag {
+    background-color:#339933;
+    font-size: 20px;
+    padding: 4px 8px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    border-radius: 6px;
+    color: white;
+  }
+
+  .product_card_image {
+    margin: auto;
+    width: 100%;
+    height: 284px;
+    align-self: stretch;
+    border-bottom: 1px solid #DDD;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .product_card {
+    width: 100%;
+    border: 1px solid #DDD;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 20px;
+    justify-content: center;
+  }
+  

@@ -1,0 +1,35 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pic {
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.text {
+    max-width: 660px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px; 
+}
+
+.text p {
+    color: #8B8B8B;
+    text-align: center;
+    padding: 0 20px; 
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.main_text {
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+    color: #282828;
+    margin-top: 20px; 
+}
