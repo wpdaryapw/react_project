@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import s from './CategoriesItem.module.css'
 
 function CategoriesItem({id, image, title}){
 
@@ -6,8 +6,8 @@ function CategoriesItem({id, image, title}){
 
     return(
         <div>
-            <img width={'200px'} src={image}/>
-            <h3>{title}</h3>
+            <img src={image} className={s.category_image}/>
+            <h3 className={s.category_text}>{title}</h3>
         </div>
     )
 }

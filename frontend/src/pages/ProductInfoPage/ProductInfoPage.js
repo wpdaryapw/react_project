@@ -18,30 +18,32 @@ function ProductInfoPage(){
     }, [id])
 
     return(
-        <div>
-            <div className={s.product_card}>
-                <div className={s.product_card_image}>
-                    {productInfo.discont_price !== null && (
-                    <div className={s.discount_tag}>
-                        {Math.round((1 - productInfo.discont_price / productInfo.price) * 100)}%
-                </div>)}
-            </div>
-        </div>
-              
-        <div>
-            <h1>{productInfo.title}</h1>
-                <img src={base_url+ productInfo.image}/>
-                {productInfo.discont_price ? (<div>
-                    <h3>${productInfo.discont_price}</h3> 
-                    <h3>${productInfo.price}</h3> </div>) 
-                    : 
-                (<div><h3>${productInfo.price}</h3></div>)}
+        <div className={s.wrapper}>
+        <div className={s.image_container} style={{backgroundImage: `url(${base_url + productInfo.image})`}}></div>
 
-                <p>{productInfo.description}</p>
+            <div className={s.product_info}>
+                    <h1 className={s.product_title}>{productInfo.title}</h1>
+                    <div className={s.product_price_info}>
+                    <div className={s.product_price_section}>
 
-                <Button title='Add to cart' theme='cart'/>
+                        {productInfo.discont_price ? (<div className={s.product_card_price_field}>
+                        <h3 className={s.product_card_price_field_price}>${productInfo.discont_price}</h3> 
+                        <h3 className={s.product_card_price_field_initial_price}>${productInfo.price}</h3> </div>) 
+                        : 
+                    (<div><h3 className={s.product_card_price_field_price}>${productInfo.price}</h3></div>)}
+
+
+                        {productInfo.discont_price !== null && (
+                        <div className={s.discount_tag}>
+                            {Math.round((1 - productInfo.discont_price / productInfo.price) * 100)}%
+                    </div>)}
+                </div>
+                        <Button title='Add to cart' theme='cart'/>
+                </div>
+
+                        <h2 className={s.description_title}>Description</h2>
+                        <p className={s.product_description}>{productInfo.description}</p>
             </div>
-            
         </div>
     )}
 

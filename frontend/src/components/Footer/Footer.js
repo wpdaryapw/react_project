@@ -32,7 +32,7 @@ function Footer(){
             </div>
 
         <div className={s.item}>
-                <div style={{width: '100%'}}><iframe width="1360" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=1360&amp;height=350&amp;hl=en&amp;q=IThub%20college%20Dubininskaya%20Ulitsa,%2096,%20Moscow,%20Russia,%20115093+(ITHUB)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/">Population mapping</a></iframe></div>
+        <div style={{width: '100%'}}><iframe width="1360" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=1360&amp;height=350&amp;hl=en&amp;q=IThub%20college%20Dubininskaya%20Ulitsa,%2096,%20Moscow,%20Russia,%20115093+(ITHUB)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/">Population mapping</a></iframe></div>
             </div>
         </div>
     </footer>

@@ -46,7 +46,10 @@
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 6px;
+    padding: 8px 16px;
+    width: fit-content;
+    height: fit-content;
 }
 
 .x_green {

@@ -1,0 +1,26 @@
+.main {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 80px 40px 0 40px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .header_text {
+    font-size: 64px;
+    font-weight: 700;
+    padding: 0 40px 0 0;
+    vertical-align: middle;
+  }
+  
+  .header_navigation {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+  }

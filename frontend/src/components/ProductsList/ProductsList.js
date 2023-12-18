@@ -13,16 +13,21 @@ const ProductsList = forwardRef((props, ref) => {
     const {category_name, productList} = useSelector((store) => store.productList)
 
     return(
-        <div>
-            <h2 ref={ref}>{category_name}</h2>
+        <div className={s.wrapper}>
+            <div className={s.header}>
+                <h2 ref={ref} className={s.header_text}>{category_name}</h2>
+                
             <div>
                 {(button) ? 
-                    <Link to={'/products/sales'}> 
-                        <Button title='All sales' theme='navigation'/>
-                    </Link> : null}
+                    <div>
+                        <Link to={'/products/sales'}> 
+                            <Button title='All sales' theme='navigation'/>
+                        </Link> 
+                    </div>
+                    : null}
             </div>
-
-        <div className="products_wrapper">
+        </div>
+        <div className={s.product_cards_list}>
                 {productList.map(elem => 
                     <ProductsItem 
                             key={elem.id} 
@@ -33,9 +38,7 @@ const ProductsList = forwardRef((props, ref) => {
                             discont_price={elem.discont_price}
                     />)}
             </div>
-
         </div>
-    )
-})
+    )})
 
 export default ProductsList

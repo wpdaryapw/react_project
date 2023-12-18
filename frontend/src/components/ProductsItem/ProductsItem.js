@@ -15,27 +15,30 @@ function ProductsItem({id, title, image, price, discont_price}){
     return (
         <Link to={`/products/${id}`}>
             <div className={s.product_card}>  
-                <div className={s.product_card_image}>
+                <div>
+                    <img src={image} className={s.product_card_image}/>
+                <div>
+
                     {discont_price !== null && (
                         <div className={s.discount_tag}>
                             {Math.round((1 - discont_price / price) * 100)}%
                         </div>)}
+                  </div>
 
-        <img width={'200px'} src={image}/>
-
-        <p>{title}</p>
-
-        {discont_price ? (<div>
-                            <h3>${discont_price}</h3> 
-                            <h3>${price}</h3>
-                        </div>) 
-                : 
-                        (<div><h3>${price}</h3></div>)}
+            <div className={s.product_card_description}>
+            <div className={s.product_card_title}>{title}</div>
+     
+                    {discont_price ? (<div className={s.product_card_price_field}>
+                                        <h3 className={s.product_card_price_field_price}>${discont_price}</h3> 
+                                        <h3 className={s.product_card_price_field_initial_price}>${price}</h3>
+                                    </div>) 
+                                    : 
+                                    (<div><h3 >${price}</h3></div>)}
                     </div>
+                </div>
             </div>
         </Link>
-  )
-}
+  )}
 
 export default ProductsItem
 

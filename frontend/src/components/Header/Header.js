@@ -22,7 +22,6 @@ function Header() {
           <Link to={'/basket'}>
             <img src={BasketIcon} className={s.icon}/>
           </Link>
-
         </div>
       </header>
     );

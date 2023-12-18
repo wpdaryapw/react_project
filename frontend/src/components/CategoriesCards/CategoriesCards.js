@@ -10,7 +10,7 @@ import { fetchCategoryById } from "../../asyncActions/ProductList"
 import CategoriesItem from "../CategoriesItem/CategoriesItem"
 
 
-function CategoriesCards({items, button}){
+function CategoriesCards({items, button, type}){
     
 
     const categoriesCards = useSelector((store) => store.categoriesCards)
@@ -30,23 +30,26 @@ function CategoriesCards({items, button}){
 
     return(
         <div className={s.main}>
-            <div className={s.nav}>
-                <h2>Categories</h2>
+            <div className={s.header}>
+                <h2 className={s.header_text}>Categories</h2>
 
-            {(button) ? 
-                    <Link to={'/categories/all'}> 
-                        <Button title='All categories' theme='navigation'/>
-                    </Link> : null}
+                <div className={s.header_navigation}>
+                {(button) ? 
+                        <Link to={'/categories/all'}> 
+                            <Button title='All categories' theme='navigation'/>
+                        </Link> : null}
+                </div>
             </div>
 
+            <div className={type}>
             {categoriesCards.slice(0, items ?? categoriesCards.length).map(elem =>
-
-            <div onClick={() => handleCategoryClick(elem.id)}>
-                    <CategoriesItem
-                            id={elem.id}
-                            image={base_url + elem.image}
-                            title={elem.title}/>         
-            </div>)}
+                <div onClick={() => handleCategoryClick(elem.id)}>
+                        <CategoriesItem
+                                id={elem.id}
+                                image={base_url + elem.image}
+                                title={elem.title}/>         
+                </div>)}
+         </div>
         </div>
     )
 }

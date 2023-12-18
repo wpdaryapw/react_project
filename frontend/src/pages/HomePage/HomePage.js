@@ -24,7 +24,7 @@ function HomePage(){
     return(
         <div>
             <Main scrollHandler={scrollHandler}/>
-            <CategoriesCards items={4} button={true}/>
+            <CategoriesCards items={4} button={true} type='categories_list_main'/>
             <DiscountForm/>
             <ProductsList button={true} ref={targetScrollRef}/>
         </div>
