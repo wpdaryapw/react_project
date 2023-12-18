@@ -16,7 +16,7 @@ const ProductsList = forwardRef((props, ref) => {
         <div className={s.wrapper}>
             <div className={s.header}>
                 <h2 ref={ref} className={s.header_text}>{category_name}</h2>
-                
+
             <div>
                 {(button) ? 
                     <div>

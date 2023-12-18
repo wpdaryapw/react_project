@@ -11,19 +11,21 @@ import HoverButton from "../HoverButton/HoverButton"
 function ProductsItem({id, title, image, price, discont_price}){
 
     const [active, setActive] = useState(false)
+    
 
     return (
         <Link to={`/products/${id}`}>
-            <div className={s.product_card}>  
-                <div>
-                    <img src={image} className={s.product_card_image}/>
-                <div>
+            <div className={s.product_card}
+                    onMouseEnter={() => setActive(true)}
+                    onMouseLeave={() => setActive(false)}>  
 
+            <div style={{backgroundImage: `url(${image})`}} className={s.product_image}>
                     {discont_price !== null && (
                         <div className={s.discount_tag}>
                             {Math.round((1 - discont_price / price) * 100)}%
                         </div>)}
-                  </div>
+                    <HoverButton active={active} setActive={setActive}/>
+            </div>
 
             <div className={s.product_card_description}>
             <div className={s.product_card_title}>{title}</div>
@@ -35,7 +37,6 @@ function ProductsItem({id, title, image, price, discont_price}){
                                     : 
                                     (<div><h3 >${price}</h3></div>)}
                     </div>
-                </div>
             </div>
         </Link>
   )}
