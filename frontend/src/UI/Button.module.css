@@ -84,11 +84,27 @@
     color: white;
     background-color: #339933;
     margin: auto;
-    width: 100%;
+    margin-bottom: 10px;
+    width: 90%;
   }
   
   .hover_but:hover {
     background-color: #282828;
   }
   
+
+  .order {
+    padding: 16px 32px;
+    background: #393;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+  }
  
+  .success {
+    background-color: white;
+    color: #000; 
+}

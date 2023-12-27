@@ -1,4 +1,3 @@
-import s from './HomePage.module.css'
 import CategoriesCards from "../../components/CategoriesCards/CategoriesCards"
 import Main from "../../components/Main/Main"
 import { useDispatch } from 'react-redux'
@@ -26,7 +25,7 @@ function HomePage(){
             <Main scrollHandler={scrollHandler}/>
             <CategoriesCards items={4} button={true} type='categories_list_main'/>
             <DiscountForm/>
-            <ProductsList button={true} ref={targetScrollRef}/>
+            <ProductsList button={true} title={true} ref={targetScrollRef}/>
         </div>
     )
 }

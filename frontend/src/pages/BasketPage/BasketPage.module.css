@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    display: flex;
+  }
+  
+  .empty_cart {
+    flex: 1;
+  }
+  
+  .order_details {
+    margin-left: 20px;
+  }
+  .basket {
+    flex: 1;
+    max-width: 100%; 
+  }
+  
+  .header_text {
+    font-size: 64px;
+    font-weight: 700;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .header_navigation {
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100% - 300px);
+    align-items: center;
+  }
+
+  
+  .message_text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+  }

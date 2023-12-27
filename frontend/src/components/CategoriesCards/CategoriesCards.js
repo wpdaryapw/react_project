@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux"
-import { store } from "../../store"
 import { useEffect } from "react"
 import { fetchAllCategoriesCards } from "../../asyncActions/categoriesCards"
 import { base_url } from "../.."

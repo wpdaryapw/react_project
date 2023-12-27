@@ -34,6 +34,7 @@
   
   .product_price_info {
     display: flex;
+    flex-direction: column;
     gap: 16px
   }
   
@@ -88,5 +89,12 @@
   .product_card_price_field {
     display: flex;
     gap: 16px;
-    align-items: baseline;
+    align-items: center;
   }
+
+  .link{
+    text-decoration: underline;
+    font-size: 16px;
+  }
+
+  

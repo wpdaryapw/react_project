@@ -1,0 +1,32 @@
+.counter {
+    display: flex;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    height: 58px;
+  }
+  
+  .price_counter_area {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .less_button, .more_button {
+    width: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 6px;
+    color: gray;
+    font-size: 35px;
+  }
+  
+  .counter_value {
+    width: 96px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

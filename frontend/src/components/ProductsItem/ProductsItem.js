@@ -1,17 +1,23 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { Link, useNavigate } from "react-router-dom"
-import { fetchAllProducts } from "../../asyncActions/ProductList"
+import { Link } from "react-router-dom"
 import s from './ProductsItem.module.css'
-import HoverButton from "../HoverButton/HoverButton"
+import { addNEwItemAction } from "../../store/BasketReducer"
+import Button from "../../UI/Button"
+import { base_url } from "../.."
 
 
+function ProductsItem(props){
 
-
-function ProductsItem({id, title, image, price, discont_price}){
+    const {id, title, image, price, discont_price} = props
 
     const [active, setActive] = useState(false)
+    const dispatch = useDispatch()
     
+    function addToCart(event){
+        event.preventDefault()
+        dispatch(addNEwItemAction({...props, count: 1}))
+    }
 
     return (
         <Link to={`/products/${id}`}>
@@ -19,12 +25,19 @@ function ProductsItem({id, title, image, price, discont_price}){
                     onMouseEnter={() => setActive(true)}
                     onMouseLeave={() => setActive(false)}>  
 
-            <div style={{backgroundImage: `url(${image})`}} className={s.product_image}>
+            <div style={{backgroundImage: `url(${base_url + image})`}} className={s.product_image}>
                     {discont_price !== null && (
                         <div className={s.discount_tag}>
                             {Math.round((1 - discont_price / price) * 100)}%
                         </div>)}
-                    <HoverButton active={active} setActive={setActive}/>
+                        <div className={s.overlay}>
+                        {active && ( 
+                        <Button
+                            title="Add to cart"
+                            theme="hover_but"
+                            onClick={(e) => addToCart(e)}
+                        />)}
+                </div>
             </div>
 
             <div className={s.product_card_description}>

@@ -1,5 +1,5 @@
 import { base_url } from "..";
-import { allProductsAction, allSalesAction, productsByCategoryAction, topSaleAction } from "../store/ProductListReducer";
+import { addProductAction, allProductsAction, allSalesAction, productsByCategoryAction, topSaleAction } from "../store/ProductListReducer";
 
 
 export function fetchAllProducts(arg){
@@ -30,5 +30,13 @@ export function fetchTopSale() {
       fetch(base_url + '/products/all')
         .then(res => res.json())
           .then(data => dispatch(topSaleAction(data)))
+    }
+}
+
+export function fetchAddProducts(){
+    return function(dispatch){
+        fetch(base_url+'/products/all')
+            .then(res => res.json())
+            .then(data => dispatch(addProductAction(data)))
     }
 }
