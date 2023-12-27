@@ -16,15 +16,15 @@
 .categories_list_main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    max-width: 1360px;
+    max-width: 100%; 
     gap: 32px;
     margin: auto;
-  }
-  
-  .categories_list_categories {
+}
+
+.categories_list_categories {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    max-width: 1360px;
+    max-width: 100%; 
     gap: 30px;
     margin: auto;
-  }
+}

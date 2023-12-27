@@ -4,7 +4,7 @@ import s from './Counter.module.css'
 
 function Counter({itemId}) {
   const dispatch = useDispatch()
-  const {items} = useSelector((store) => store.basket)
+  const {items, count} = useSelector((store) => store.basket)
 
   const item = items.find((elem) => elem.id === itemId)
   if (!item) {

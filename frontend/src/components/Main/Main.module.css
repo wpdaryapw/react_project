@@ -2,6 +2,7 @@
     width: 100%;
     height: 600px;
     padding: 80px 40px 0 40px;
+    max-width: 1440px;
   }
   
   .text {

@@ -5,9 +5,8 @@ import { fetchProductInfo } from "../../asyncActions/productInfo"
 import { base_url } from "../.."
 import Button from "../../UI/Button"
 import s from './ProductInfoPage.module.css'
-import { addNEwItemAction, changeCountAction } from "../../store/BasketReducer"
+import { addNEwItemAction } from "../../store/BasketReducer"
 import Counter from "../../components/Counter/Counter"
-import { store } from "../../store"
 
 function ProductInfoPage(){
 
@@ -49,7 +48,7 @@ function ProductInfoPage(){
                 )}
               </div>
               <div className={s.product_card_price_field}>
-              
+                <Counter itemId={productInfo.id} />
                 <Button title='Add to cart' theme='cart' onClick={(e) => addToCart(e)}/>
               </div>
             </div>

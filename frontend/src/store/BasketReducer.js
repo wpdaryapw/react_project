@@ -1,8 +1,5 @@
 
-const defaultState = {
-    items: [],
-    count: 1
-}
+const storedItems = JSON.parse(localStorage.getItem('items')) || []
 
 
 
@@ -20,7 +17,7 @@ function changeCountItem(array, id, count) {
     })
   }
   
-  export const cartReducer = (state = defaultState, action) => {
+  export const cartReducer = (state = { items: storedItems, count: 1 }, action)  => {
     switch (action.type) {
     case ADD_NEW_ITEM:
         let { id, title, image, price, count, discont_price } = action.payload

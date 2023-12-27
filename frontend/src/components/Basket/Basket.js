@@ -1,14 +1,19 @@
 import { useDispatch, useSelector } from "react-redux"
-import { changeCountAction, removeFromBasketAction } from "../../store/BasketReducer"
+import { removeFromBasketAction } from "../../store/BasketReducer"
 import { base_url } from "../.."
 import Counter from "../Counter/Counter"
 import s from './Basket.module.css'
 import { ReactComponent as Item} from '../../images/krestik.svg'
 import { Link } from "react-router-dom"
+import { useEffect } from "react"
 
 function Basket(){
     const dispatch = useDispatch()
     const {items, count} = useSelector((store) => store.basket)
+
+    useEffect(() => {
+        localStorage.setItem('items', JSON.stringify(items))
+    }, [items])
 
     return(
         <div>
